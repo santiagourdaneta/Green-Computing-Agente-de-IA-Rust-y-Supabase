@@ -1,0 +1,7 @@
+services:
+  agente-ia:
+    build: .
+    volumes:
+      - ./documentos:/app/documentos
+    env_file:
+      - .env

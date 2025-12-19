@@ -1,0 +1,69 @@
+GREEN COMPUTING (COMPUTACIÓN VERDE)
+
+La Green Computing es el conjunto de prácticas, tecnologías y políticas orientadas a reducir el impacto ambiental de la informática durante todo su ciclo de vida: diseño, fabricación, uso y desecho.
+
+OBJETIVOS PRINCIPALES
+Reducir el consumo energético.
+Disminuir las emisiones de CO₂.
+Minimizar los residuos electrónicos.
+Aumentar la eficiencia y vida útil del hardware.
+Promover el uso responsable de los recursos digitales.
+
+ÁREAS CLAVE DE LA GREEN COMPUTING
+
+Hardware eficiente
+Uso de procesadores de bajo consumo.
+Empleo de discos SSD en lugar de HDD.
+Fuentes de poder con certificación de eficiencia energética.
+Diseño de equipos reparables y modulares.
+
+Software eficiente
+Optimización de algoritmos para reducir uso de CPU y memoria.
+Aplicaciones ligeras y bien programadas.
+Reducción de procesos innecesarios en segundo plano.
+Uso de código limpio y optimizado.
+
+Virtualización y computación en la nube
+Consolidación de servidores para reducir hardware físico.
+Uso de contenedores en lugar de múltiples máquinas virtuales.
+Centros de datos que utilizan energías renovables.
+Escalado dinámico de recursos según demanda.
+
+Gestión de energía
+Uso de modos de suspensión e hibernación.
+Apagado automático de equipos inactivos.
+Políticas de ahorro energético en organizaciones.
+Monitoreo constante del consumo eléctrico.
+
+Ciclo de vida y reciclaje
+Reutilización de equipos informáticos.
+Reciclaje adecuado de componentes electrónicos.
+Eliminación segura del hardware obsoleto.
+Aplicación de principios de economía circular.
+
+GREEN COMPUTING EN LAS EMPRESAS
+Implementación de centros de datos ecológicos.
+Fomento del teletrabajo para reducir emisiones por transporte.
+Digitalización de procesos para reducir el uso de papel.
+Medición y reducción de la huella de carbono tecnológica.
+
+GREEN COMPUTING PARA DESARROLLADORES
+Escritura de código eficiente.
+Optimización de consultas a bases de datos.
+Reducción de llamadas innecesarias a APIs.
+Evitar el uso excesivo de recursos sin justificación.
+Uso de arquitecturas serverless cuando sea posible.
+
+BENEFICIOS
+Reducción de costos operativos.
+Mejor rendimiento de sistemas.
+Menor impacto ambiental.
+Cumplimiento de normas ecológicas.
+Sostenibilidad tecnológica a largo plazo.
+
+FUTURO DE LA GREEN COMPUTING
+Desarrollo de inteligencia artificial más eficiente energéticamente.
+Nuevos tipos de procesadores de bajo consumo.
+Computación con menor huella de carbono.
+Mayor regulación ambiental en tecnología.
+Conciencia global sobre el uso responsable de la informática.

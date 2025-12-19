@@ -1,0 +1,64 @@
+name: Quality_Gate_Senior_Final
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+env:
+  CARGO_TERM_COLOR: always
+  # Variables necesarias para los tests de integración en la nube de GitHub
+  SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+  SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+  HUGGINGFACE_KEY: ${{ secrets.HUGGINGFACE_KEY }}
+
+jobs:
+  guardian:
+    name: Validar_Infraestructura
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar código
+        uses: actions/checkout@v4
+
+      - name: 🦀 Configurar Rust (Cacheado para velocidad)
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: 📏 Paso 1: Formatter (Estética Perfecta)
+        run: cargo fmt --all -- --check
+
+      - name: 🔍 Paso 2: Linter (Código Senior)
+        run: cargo clippy -- -D warnings
+
+      - name: 🧪 Paso 3: Tests Unitarios (Lógica)
+        run: cargo test --lib --bins
+
+      - name: 🔗 Paso 4: Tests de Integración (Conexión Real)
+        run: cargo test --test '*'
+        # Este paso verifica que Rust hable con Supabase y HuggingFace
+
+      - name: ⚡ Paso 5: Test de Estrés (Resiliencia)
+        # Usar Docker para no instalar nada extra
+        run: |
+          docker run --rm -i grafana/k6 run - < stress_test.js
+
+      deploy:
+          name: Despliegue_Automatico
+          needs: guardian # <--- Solo corre si el guardian aprueba todo
+          runs-on: ubuntu-latest
+          if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+
+          steps:
+            - name: 📥 Clonar codigo
+              uses: actions/checkout@v4
+
+            - name: 🚀 Desplegar en Vercel
+              uses: amondnet/vercel-action@v20
+              with:
+                vercel-token: ${{ secrets.VERCEL_TOKEN }}
+                vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+                vercel-project_id: ${{ secrets.VERCEL_PROJECT_ID }}
+                vercel-args: '--prod' # Despliegue directo a producción    
