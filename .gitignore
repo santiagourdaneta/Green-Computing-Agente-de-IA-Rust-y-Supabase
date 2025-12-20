@@ -1,2 +1,38 @@
-/target
+# --- RUST / CARGO ---
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# --- NODE / VERCEL ---
+node_modules/
+.vercel
+.next/
+out/
+build/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- SECRETOS (¡CRÍTICO!) ---
 .env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# --- SISTEMA Y LOGS ---
+.DS_Store
+Thumbs.db
+*.log
+desktop.ini
+
+# --- DATOS LOCALES ---
+# Ignoramos los documentos locales que usas para indexar
+# para no llenar el repo de archivos personales.
+/documentos/*.txt
+/documentos/*.pdf
+
+# --- TESTS Y COBERTURA ---
+*.lcov
+stress_test_report.json

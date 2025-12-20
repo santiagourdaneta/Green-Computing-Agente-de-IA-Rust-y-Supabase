@@ -1,0 +1,27 @@
+{
+  "name": "Green*Computing-Agente-de-IA",
+  "version": "1.0.0",
+  "description": "Arquitectura RAG ultra-ligera con Rust y Supabase",
+  "main": "api/preguntar.js",
+  "scripts": {
+    "start": "servor --reload",
+    "test:smoke": "node smoke_test.js",
+    "test:stress": "k6 run stress_test.js"
+  },
+  "keywords": [
+    "rust",
+    "ia",
+    "rag",
+    "green-computing",
+    "supabase"
+  ],
+  "author": "Santiago Urdaneta",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "servor": "^4.0.2"
+  }
+}
